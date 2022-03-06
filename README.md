@@ -6,7 +6,7 @@ Three models :
 * Logistic regression
 * Neural network
 
-trained to label anonymized credit card transactions as fraudulent or genuine. Dataset from [Kaggle](https://www.kaggle.com/dalpozz/creditcardfraud). Project through [ML@B](https://ml.berkeley.edu).
+trained to label anonymized credit card transactions as fraudulent or genuine. Dataset from [Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud). Project through [ML@B](https://ml.berkeley.edu).
 
 Project by [Makena Schwinn](https://github.com/makenaschwinn), [Sunny Zhang](https://github.com/sunnyzhang13), and [Georgy Marrero](https://github.com/georgymh).
 

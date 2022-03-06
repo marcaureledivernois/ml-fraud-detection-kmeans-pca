@@ -28,6 +28,18 @@ X_train, X_test, y_train, y_test = train_test_split(X_reduced, y, test_size = 0.
 kmeans = KMeans(init='k-means++', n_clusters=2, n_init=10)
 kmeans.fit(X_train)
 
+for index in range(len(np.unique(y_train))):  # for index in range(k):
+    instances = [i for i in range(len(X_train)) if y_train.iloc[i] == index]
+    plt.scatter(X_train[instances, 0], X_train[instances, 1])
+plt.show()
+
+predictions = kmeans.predict(X_train)
+
+for index in range(len(np.unique(y_train))):  # for index in range(k):
+    instances = [i for i in range(len(X_train)) if predictions[i] == index]
+    plt.scatter(X_train[instances, 0], X_train[instances, 1])
+plt.show()
+
 # Step size of the mesh. Decrease to increase the quality of the VQ.
 h = .01     # point in the mesh [x_min, x_max]x[y_min, y_max].
 
@@ -60,6 +72,10 @@ plt.ylim(y_min, y_max)
 plt.xticks(())
 plt.yticks(())
 plt.show()
+
+#[M.-A. D. edit : I think below is incorrect. kmeans don't know which cluster corresponds to fraud or real.
+# We shouldnt be able to compare y_test = 1 with prediction = 1.
+# Issue submitted to georgymh (github author)
 
 predictions = kmeans.predict(X_test)
 

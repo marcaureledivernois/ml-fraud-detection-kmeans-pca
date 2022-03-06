@@ -2,7 +2,7 @@ import numpy as np
 import sklearn as sk
 import pandas as pd
 import matplotlib.pyplot as plt
-from pandas_ml import ConfusionMatrix
+from pandas_ml import ConfusionMatrix   #pandas_ml bad package. plenty of AttributeErrors and deprecated modules
 import pandas_ml as pdml
 from sklearn.preprocessing import scale
 import random
